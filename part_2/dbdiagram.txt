@@ -1,0 +1,32 @@
+Table procedes_impact {
+  uuid string [primary key]
+  unite string
+
+  mol_eq_h float
+  kg_eq_cfc_11 float
+  kg_eq_co2 float
+  kg_eq_co2_1 float
+  kg_eq_co2_2 float
+  kg_eq_p float
+  kg_eq_n float
+  mol_eq_n float
+  kg_eq_covnm float
+  incidence_de_maladie float
+  eq_kbq_u235 float
+  mj float
+  kg_eq_sb float
+  sans_dimension_pt float
+}
+
+Table procedes_details {
+  uuid string [primary key]
+
+  categorisation_1 varchar
+  categorisation_2 varchar
+  categorisation_3 varchar
+  categorisation_4 varchar
+}
+
+
+
+Ref: procedes_details.uuid < procedes_impact.uuid
